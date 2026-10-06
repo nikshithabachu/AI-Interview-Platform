@@ -1,0 +1,107 @@
+/* ==========================================================
+   AI Interview Preparation Platform - custom styles
+   Loaded from app.py using st.markdown(..., unsafe_allow_html=True)
+   ========================================================== */
+
+/* ---------- Page ---------- */
+.block-container {
+    padding-top: 2rem;
+    max-width: 800px;
+}
+
+/* ---------- Title (gradient text, emoji keeps its own colour) ---------- */
+.app-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+}
+
+.app-title-text {
+    background: linear-gradient(90deg, #ff4b4b, #ff8f4b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2, h3 {
+    font-weight: 700;
+}
+
+/* ---------- Sidebar ---------- */
+[data-testid="stSidebar"] {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Buttons ---------- */
+.stButton > button {
+    border-radius: 10px;
+    padding: 0.6rem 1.4rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 75, 75, 0.35);
+}
+
+.stButton > button[kind="primary"] {
+    background: linear-gradient(90deg, #ff4b4b, #ff7a4b);
+    border: none;
+    color: white;
+}
+
+/* ---------- Input boxes ---------- */
+.stTextInput input,
+.stTextArea textarea,
+.stSelectbox div[data-baseweb="select"] > div {
+    border-radius: 10px;
+}
+
+.stTextInput input:focus,
+.stTextArea textarea:focus {
+    border-color: #ff4b4b;
+    box-shadow: 0 0 0 1px #ff4b4b;
+}
+
+/* ---------- Question heading ---------- */
+h3 {
+    border-left: 4px solid #ff4b4b;
+    padding-left: 0.6rem;
+}
+
+/* ---------- Info / success / warning / error boxes ---------- */
+div[data-testid="stAlert"] {
+    border-radius: 12px;
+}
+
+/* ---------- Metric cards (summary page) ---------- */
+div[data-testid="stMetric"] {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+    text-align: center;
+}
+
+div[data-testid="stMetricValue"] {
+    color: #ff4b4b;
+    font-weight: 800;
+}
+
+/* ---------- Expanders (answer review) ---------- */
+div[data-testid="stExpander"] {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0.5rem;
+}
+
+/* ---------- Progress bar ---------- */
+div[data-testid="stProgress"] > div > div > div > div {
+    background: linear-gradient(90deg, #ff4b4b, #ff8f4b);
+}
+
+/* ---------- Hide default Streamlit footer & menu ---------- */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
